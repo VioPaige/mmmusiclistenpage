@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The official MMMusic website!">
+    <meta property="og:title" content="MMMusic">
+    <meta property="og:description" content="Welcome to the MMMusic website, the best place to listen your music!">
+    <meta property="og:image" content="/Imagery/Logo/MMMusicLogo256.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/Universal.css" rel="stylesheet" type="text/css">
+    <link href="/Listen.css" rel="stylesheet">
+    <link href="/Overwrite.css" rel="stylesheet">
+
+    <script src="/Listen.js" defer></script>
+    <script src="/Flex.js"></script>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body class="body">
+
+    <nav class="navbar">
+
+        <div class="BrandTitle">
+            <span class="FreshFruit">MM</span><span class="GlossAndBloom">Music</span>
+        </div>
+        <a href="#" class="nav-toggle" id="navhamburger">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </a>
+        <div id="navbuttondiv" class="navbuttondiv">
+            <ul>
+                <li><a href="/" class="navbuttondivselected">
+                        <span>Home</span>
+                </a></li>
+                <% if (localAccountData==undefined) { %>
+                <li><a href="/signin">
+                            <span>Log In</span>
+                </a></li>
+                <% } else { %>
+                <li><a href="/profile">
+                    <span>
+                        <%= localAccountData.username %>
+                    </span>
+                </a></li>
+                <% } %>
+                <li><a href="/listen">
+                    <span class="navbuttondivselected">Listen Now</span>
+                </a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="content">
+
+        <div class="rightbar">
+
+            <!-- lorem ipsum is overrated -->
+            <div class="rightbar-important">
+
+                <button class="rightbar-important-button selected hovertransformpink">For you</button>
+                <button class="rightbar-important-button hovertransformpink">Library</button>
+                <button class="rightbar-important-button hovertransformpink">Search</button>
+
+                <br>
+
+                <div class="separatingline"></div>
+
+                <br>
+
+                <button class="rightbar-important-button textpink hovertransformyellow">New Playlist</button>
+
+            </div>
+
+        </div>
+
+        <div class="listenpagecontent">
+            <!-- <button id="testplay" class="swapbutton">Play</button> -->
+
+            <!-- <div class="content"> -->
+
+            <section class="contentgrid">
+
+                <div class="rowholder">
+
+                    <p class="listencardblocktitle">Continue listening</p>
+
+                    <section class="cardsgrid">
+                        <div class="listencard active playing">
+                            <div class="listencardicon">
+                                <img src="/Imagery/ckv/lushlife.jpg" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">Lush Life</p>
+                            <p class="listencardartist" style="margin: -3px;">Zara Larsson</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/ckv/grenade.jpg" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">Grenade</p>
+                            <p class="listencardartist" style="margin: -3px;">Bruno Mars</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/ckv/fastcar.jpg" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">Fast Car</p>
+                            <p class="listencardartist" style="margin: -3px;">Jonas Blue</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/ckv/run.jpg" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">Run</p>
+                            <p class="listencardartist" style="margin: -3px;">OneRepublic</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/ckv/lovemeagain.jpg" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">Love me again</p>
+                            <p class="listencardartist" style="margin: -3px;">John Newman</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/ckv/bananas.jfif" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">Bananas</p>
+                            <p class="listencardartist" style="margin: -3px;">Malou Prytz</p>
+                        </div>
+                    </section>
+                    <br>
+
+                </div>
+                <div class="rowholder">
+
+                    <p class="listencardblocktitle">Recommended songs</p>
+
+                    <section class="cardsgrid">
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/ckv/no.png" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">No</p>
+                            <p class="listencardartist" style="margin: -3px;">Little Mix</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/ckv/cheating.jfif" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">Cheating</p>
+                            <p class="listencardartist" style="margin: -3px;">John Newman</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/ckv/feels.jpg" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">Feels</p>
+                            <p class="listencardartist" style="margin: -3px;">Calvin Harris</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/ckv/drive.jpg" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">Drive</p>
+                            <p class="listencardartist" style="margin: -3px;">Clean Bandit</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/ckv/believer.jpg" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">Believer</p>
+                            <p class="listencardartist" style="margin: -3px;">Imagine Dragons</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/ckv/treasure.jpg" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">Treasure</p>
+                            <p class="listencardartist" style="margin: -3px;">Bruno Mars</p>
+                        </div>
+                    </section>
+
+                </div>
+                <div class="rowholder">
+
+                    <p class="listencardblocktitle">Recommended artists</p>
+
+                    <section class="cardsgrid">
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/Logo/MMMusicLogo256.png" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname" style="margin-top: 6%;">MMMusic</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/Logo/MMMusicLogo256.png" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname" style="margin-top: 6%;">MMMusic</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/Logo/MMMusicLogo256.png" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname" style="margin-top: 6%;">MMMusic</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/Logo/MMMusicLogo256.png" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname" style="margin-top: 6%;">MMMusic</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/Logo/MMMusicLogo256.png" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname" style="margin-top: 6%;">MMMusic</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/Logo/MMMusicLogo256.png" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname" style="margin-top: 6%;">MMMusic</p>
+                        </div>
+                    </section>
+
+                </div>
+                <div class="rowholder">
+
+                    <p class="listencardblocktitle">Custom playlists for you</p>
+
+                    <section class="cardsgrid">
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/Logo/MMMusicLogo256.png" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">MMMusic</p>
+                            <p class="listencardartist" style="margin: -3px;">Artist</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/Logo/MMMusicLogo256.png" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">MMMusic</p>
+                            <p class="listencardartist" style="margin: -3px;">Artist</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/Logo/MMMusicLogo256.png" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">MMMusic</p>
+                            <p class="listencardartist" style="margin: -3px;">Artist</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/Logo/MMMusicLogo256.png" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">MMMusic</p>
+                            <p class="listencardartist" style="margin: -3px;">Artist</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/Logo/MMMusicLogo256.png" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">MMMusic</p>
+                            <p class="listencardartist" style="margin: -3px;">Artist</p>
+                        </div>
+                        <div class="listencard active">
+                            <div class="listencardicon">
+                                <img src="/Imagery/Logo/MMMusicLogo256.png" width="100%" height="auto" alt="" class="roundedimage">
+                            </div>
+                            <p class="listencardname">MMMusic</p>
+                            <p class="listencardartist" style="margin: -3px;">Artist</p>
+                        </div>
+                    </section>
+
+                </div>
+
+            </section>
+
+            <!-- </div> -->
+
+        </div>
+
+    </div>
+
+    <div class="controller">        
+        <!-- <h1>Lorem ipsum is overrated</h1> -->
+        <div class="controller-info">
+            <div class="controller-icon">
+                <iframe src="https://youtube.com/embed/JaLJheoYfDM?rel=0&autoplay=1" width="100%" height="100%" class="controller-icon-content"></iframe>
+                <img src="/Imagery/ckv/lushlife.jpg" class="controller-icon-content active">
+            </div>
+            <div class="controller-text">
+                <!-- <p> -->
+                    <div class="controller-text-title-div">
+                        
+                        <a class="controller-text-title" href="#">Lush Life</a><br>
+
+                    </div>
+                <!-- </p><br><br> -->
+                <!-- <p> -->
+                    <a class="controller-text-artist" href="#">Zara Larsson</a>
+                    <p class="controller-text-length" style="padding: 0; margin: 0; margin-left: 20px;">2:01/3:22</p> 
+                <!-- </p> -->
+            </div>
+        </div>
+
+        <div class="controller-controls">
+            
+            <div class="controller-controls-parts">
+                <!-- <div class="controller-controls-icon"></div> -->
+                <div class="controller-controls-icon-skipback"></div>
+                <div class="controller-controls-icon-play"></div>
+                <div class="controller-controls-icon-skip"></div>
+                <div class="controller-controls-icon-replay"></div>
+            </div>
+            
+            <div class="controller-controls-parts">
+
+                <div class="controller-controls-fillbar-back">
+                    <div id="tofill" class="test-tofill"></div>
+                </div>
+
+            </div>
+            
+        </div>
+
+        <div class="controller-extra">
+            <div class="controller-extra-spacetaker"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

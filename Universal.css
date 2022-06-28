@@ -1,0 +1,165 @@
+@font-face {
+
+    font-family: FreshFruit;
+    src: url('Fonts/Fresh_Fruit.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: GlossAndBloom;
+    src: url('Fonts/Gloss_And_Bloom.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: Karla;
+    src: url('Fonts/Karla-MediumItalic.ttf');
+    font-weight: normal;
+    font-style: normal
+
+}
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: "Karla";
+    text-shadow: 2px 2px #000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    height: fit-content;
+}
+
+.BrandTitle {
+    font-size: 1.75rem;
+    margin: .25rem;
+}
+
+.FreshFruit {
+    font-family: "FreshFruit";
+    color: #ffdc5e;
+}
+
+.freshfruitnocolour {
+    font-family: "FreshFruit";
+}
+
+.GlossAndBloom {
+    font-family: "GlossAndBloom";
+    color: #f86be6;
+}
+
+.glossandbloomnocolour {
+    font-family: "GlossAndBloom";
+}
+
+.navbuttondiv ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbuttondiv li {
+    list-style: none;
+}
+
+.navbuttondiv li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 1rem;
+    display: block;
+}
+
+.navbuttondiv li a:active, .navbuttondiv li a:focus {
+    outline: 0px;
+}
+
+.navbuttondivselected {
+    color: #ffdc5e;
+}
+
+.navbuttondiv li:hover {
+    background-color: #222;
+}
+
+.nav-toggle {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.nav-toggle-bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.content-wrapper {
+    height: 88%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* background-color: #000; */
+    /* opacity: .1; */
+}
+
+.selected {
+    color: #ffdc5e;
+}
+
+
+
+@media (max-width: 700px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .navbuttondiv {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbuttondiv ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbuttondiv li {
+        text-align: center;
+    }
+
+    .navbuttondiv li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbuttondiv.active {
+        display: flex;
+    }
+}
