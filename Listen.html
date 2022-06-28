@@ -42,17 +42,6 @@
                 <li><a href="/" class="navbuttondivselected">
                         <span>Home</span>
                 </a></li>
-                <% if (localAccountData==undefined) { %>
-                <li><a href="/signin">
-                            <span>Log In</span>
-                </a></li>
-                <% } else { %>
-                <li><a href="/profile">
-                    <span>
-                        <%= localAccountData.username %>
-                    </span>
-                </a></li>
-                <% } %>
                 <li><a href="/listen">
                     <span class="navbuttondivselected">Listen Now</span>
                 </a></li>
